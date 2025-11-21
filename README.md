@@ -6,7 +6,7 @@ It includes:
 1. A clean Cypress folder structure
 2. Example E2E tests
 3. Basic UI interactions and assertions
-4. A minimal and scalable setup suitable for junior-level QA automation
+4. A minimal and scalable setup suitable for a QA automation junior
 
 More tests and improvements will be added soon as I expand my QA automation portfolio, including structured frameworks, API tests, and CI integration.
 
