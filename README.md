@@ -29,6 +29,7 @@ npx cypress open
 npx cypress run
 
 📁 Project Structure
+
 cypress/
 ├─ e2e/
 │ ├─ form.cy.js
@@ -37,7 +38,12 @@ cypress/
 │ ├─ radio.cy.js
 │ ├─ hello.cy.js
 │ ├─ link.cy.js
-│ └─ login.cy.js
+│ ├─ login.cy.js
+│ └─ real_sites/
+│   ├─ 01_homepage.cy.js       # Sauce Demo homepage
+│   ├─ 02_product.cy.js        # Sauce Demo product details (in progress)
+│   ├─ 03_add_to_cart.cy.js    # Sauce Demo add to cart (in progress)
+│   └─ 04_login.cy.js          # Sauce Demo login flow (in progress)
 ├─ fixtures/
 │ ├─ index.html
 │ ├─ dropdown.html
@@ -50,45 +56,61 @@ cypress.config.js
 package.json
 README.md
 
-
 📌 Tests Included
 
-1. form.cy.js – Fill out and submit a contact form  
-2. dropdown.cy.js – Select a value from a dropdown menu  
-3. checkbox.cy.js – Select and deselect checkboxes  
-4. radio.cy.js – Select radio button options  
-5. hello.cy.js – Simple UI interaction test  
-6. link.cy.js – Verify link navigation
-7. login.cy.js – Fill out and submit a login form
-8. (working on.. More tests and improvements will be added very soon)
+Local Fixtures
+
+form.cy.js – Fill out and submit a contact form
+
+dropdown.cy.js – Select a value from a dropdown menu
+
+checkbox.cy.js – Select and deselect checkboxes
+
+radio.cy.js – Select radio button options
+
+hello.cy.js – Simple UI interaction test
+
+link.cy.js – Verify link navigation
+
+login.cy.js – Fill out and submit a login form
+
+Real Sites (Sauce Demo)
+
+01_homepage.cy.js – Homepage: verify login form and elements
+
+02_product.cy.js – Product details page (in progress)
+
+03_add_to_cart.cy.js – Add product to cart (in progress)
+
+04_login.cy.js – Login flow (in progress)
 
 📌 Purpose of This Repository
 
-This repository is part of my growing QA Automation Portfolio.
-The main goal is to demonstrate:
+Demonstrate understanding of Cypress
 
-- My understanding of Cypress  
-- My ability to write clean and readable tests  
-- Continuous learning in QA Automation  
-- Ability to build scalable testing frameworks  
+Write clean, readable, and maintainable tests
+
+Show continuous learning in QA Automation
+
+Build a scalable testing framework
 
 🚧 Upcoming Additions (Roadmap)
 
-- Add more UI tests  
-- Add API testing with Cypress  
-- Introduce Page Object Model (POM)  
-- Add data-driven testing  
-- Add CI/CD pipeline (GitHub Actions)  
-- Add cross-browser support  
+Complete real site tests (products, cart, login)
 
-📬 Contact
+API testing with Cypress
 
-For info, collaboration, or feedback:  
-📧 m.lobianco@hotmail.it  
-🔗 LinkedIn: linkedin.com/in/marco-lo-bianco-869311b1
+Introduce Page Object Model (POM)
+
+Add data-driven testing
+
+Add CI/CD pipeline (GitHub Actions)
+
+Cross-browser testing
 
 📬 Contact
 
 For info, collaboration, or feedback:
 📧 m.lobianco@hotmail.it
-🔗 LinkedIn: linkedin.com/in/marco-lo-bianco-869311b1
+
+🔗 LinkedIn
