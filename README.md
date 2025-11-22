@@ -78,11 +78,11 @@ Real Sites (Sauce Demo.com)
 
 01_homepage.cy.js – Homepage: verify login form and elements
 
-02_product.cy.js – Product details page (in progress)
+02_product.cy.js – Product details page
 
-03_add_to_cart.cy.js – Add product to cart (in progress)
+03_add_to_cart.cy.js – Add product to cart
 
-04_login.cy.js – Login flow (in progress)
+04_login.cy.js – Login flow
 
 📌 Purpose of This Repository
 
