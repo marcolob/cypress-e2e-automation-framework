@@ -70,11 +70,11 @@ radio.cy.js – Select radio button options
 
 login.cy.js – Fill out and submit a login form
 
--hello.cy.js – Simple UI interaction test (Real website)
+hello.cy.js – Simple UI interaction test (E2E website testing)
 
--link.cy.js – Verify link navigation  (Real website)
+link.cy.js – Verify link navigation  (E2E website testing)
 
--Real Site project (Sauce Demo.com):
+-Web E2E Automation (Cypress) project 1 (Sauce Demo.com):
 
 01_homepage.cy.js – Homepage: verify login form and elements
 
