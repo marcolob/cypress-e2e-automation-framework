@@ -40,7 +40,7 @@ cypress/
 │ ├─ link.cy.js  (REAL website)
 │ ├─ login.cy.js
 │ └─ real_sites/
-│   ├─ 01_homepage.cy.js       # Sauce Demo homepage
+│   ├─ 01_homepage.cy.js       # Sauce Demo homepage 
 │   ├─ 02_product.cy.js        # Sauce Demo product details (in progress)
 │   ├─ 03_add_to_cart.cy.js    # Sauce Demo add to cart (in progress)
 │   └─ 04_login.cy.js          # Sauce Demo login flow (in progress)
@@ -58,7 +58,7 @@ README.md
 
 📌 Tests Included
 
-Local Fixtures
+-Local Fixtures:
 
 form.cy.js – Fill out and submit a contact form
 
@@ -68,13 +68,13 @@ checkbox.cy.js – Select and deselect checkboxes
 
 radio.cy.js – Select radio button options
 
-hello.cy.js – Simple UI interaction test (Real website)
-
-link.cy.js – Verify link navigation  (Real website)
-
 login.cy.js – Fill out and submit a login form
 
-Real Sites (Sauce Demo.com)
+-hello.cy.js – Simple UI interaction test (Real website)
+
+-link.cy.js – Verify link navigation  (Real website)
+
+-Real Site project (Sauce Demo.com):
 
 01_homepage.cy.js – Homepage: verify login form and elements
 
