@@ -1,8 +1,11 @@
-Cypress Basic Tests – QA Automation Portfolio
+Cypress Automation Portfolio
+
+E2E Testing • UI Automation • POM (in progress)
+
 📌 Overview
 
-This repository contains a Cypress automation project demonstrating foundational end-to-end (E2E) testing skills, with a mix of local fixture tests and real website scenarios (Sauce Demo).
-It is designed as a scalable and maintainable framework for Junior-to-Mid QA Automation roles.
+This repository contains a Cypress automation project showcasing core QA Automation skills, including both local UI tests (HTML fixtures) and real website E2E flows (SauceDemo).
+The project is structured following scalable and maintainable testing principles, suitable for Junior / Junior-Mid QA Automation Engineer positions.
 
 🛠️ Tech Stack
 
@@ -10,107 +13,120 @@ Cypress 13+
 
 JavaScript (Node.js)
 
-Node Package Manager (npm)
+npm
 
 Mochawesome Reporter (HTML reports)
 
-GitHub Actions (CI/CD, upcoming)
+GitHub Actions CI/CD (upcoming)
 
 📁 Project Structure
 
 cypress/
-├─ e2e/
-│  ├─ form.cy.js
-│  ├─ dropdown.cy.js
-│  ├─ checkbox.cy.js
-│  ├─ radio.cy.js
-│  ├─ hello.cy.js       # Real website test
-│  ├─ link.cy.js        # Real website test
-│  └─ real_sites/
-│     ├─ 01_homepage.cy.js       # Sauce Demo homepage
-│     ├─ 02_product.cy.js        # Product details page (in progress)
-│     ├─ 03_add_to_cart.cy.js    # Add to cart flow (in progress)
-│     └─ 04_login.cy.js          # Login flow (in progress)
-├─ fixtures/
-│  ├─ index.html
-│  ├─ dropdown.html
-│  ├─ checkbox.html
-│  ├─ radio.html
-│  └─ login.html
-└─ support/
-   └─ commands.js
+  e2e/
+    basics/                 # UI tests on local HTML fixtures
+      form.cy.js
+      dropdown.cy.js
+      checkbox.cy.js
+      radio.cy.js
+      login.cy.js
+      hello.cy.js
+      link.cy.js
+
+    real_site/              # Real website automation (SauceDemo)
+      01_homepage.cy.js
+      02_product.cy.js
+      03_add_to_cart.cy.js
+      04_login.cy.js
+
+    smoke/                  # (To be added)
+    regression/             # (To be added)
+
+  fixtures/                 # Local HTML pages + test data
+    index.html
+    dropdown.html
+    checkbox.html
+    radio.html
+    login.html
+
+  pages/                    # Page Object Model (in progress)
+    loginPage.js
+    productsPage.js
+    cartPage.js
+
+  support/
+    commands.js
+    e2e.js
+
 cypress.config.js
 package.json
 README.md
 
+📌 Folder Description
+🧪 basics/
 
-✅ Tests Included
+Contains simple UI interaction tests using local HTML fixtures:
 
-1. Local Fixture Tests
+form validation
 
-form.cy.js – Fill out and submit a contact form
+inputs
 
-dropdown.cy.js – Select value from a dropdown menu
+dropdowns
 
-checkbox.cy.js – Select/deselect checkboxes
+radio buttons
 
-radio.cy.js – Select radio button options
+checkboxes
 
-login.cy.js – Fill and submit a login form
+links
+Great for demonstrating knowledge of selectors, Cypress commands, and assertions.
 
-hello.cy.js – Simple UI interaction (E2E)
+🌐 real_site/
 
-link.cy.js – Verify link navigation (E2E)
+Full end-to-end automation using SauceDemo, including:
 
-2. 🌐 Web E2E Automation (Sauce Demo.com)
+login flow
 
-01_homepage.cy.js – Verify login form and elements
+product listing validation
 
-02_product.cy.js – Product details page (in progress)
+add-to-cart functionality
 
-03_add_to_cart.cy.js – Add product to cart (in progress)
+UI assertions
 
-04_login.cy.js – Login flow (in progress)
+complete E2E journeys
 
-These tests demonstrate real-world E2E flows with Cypress, laying the groundwork for more advanced automation scenarios.
+🏗️ pages/
 
-▶️ How to Install & Run the Tests
+Page Object Model implementation (in progress):
 
-Clone the repository: git clone https://github.com/marcolob/cypress-basic-tests.git
+centralized locators
 
-Install dependencies: npm install
+reusable UI actions
 
-Run Cypress in interactive mode: npx cypress open
+improved maintainability
 
-Run Cypress in headless mode: npx cypress run
+🔥 smoke/
 
-🎯 Purpose / Learning Outcomes
+To be added: fast, critical-path tests for smoke checks.
 
-Build clean, readable, and maintainable tests
+🔄 regression/
 
-Demonstrate understanding of Cypress and automation fundamentals
+To be added: full regression suite run before releases.
 
-Show continuous learning in QA Automation
+📦 fixtures/
 
-Lay foundations for a scalable automation framework
+Local HTML files and JSON datasets.
 
-🚧 Roadmap / Upcoming Additions (Very soon)
+🧰 support/
 
-✅ Complete real site tests (products, cart, login)
-
-API testing with Cypress (integration with backend)
-
-Page Object Model (POM) implementation
-
-Data-driven testing
-
-CI/CD pipeline with GitHub Actions
-
-Cross-browser testing (Chrome, Firefox, Edge)
+Global config, reusable custom commands, and shared setup.
 
 📬 Contact
 
-For info, collaboration, or feedback:
-📧 m.lobianco@hotmail.it
+📧 Email: m.lobianco@hotmail.it
+
+🔗 LinkedIn: www.linkedin.com/in/marco-lo-bianco-869311b1
+
+😎 Open to collaboration, learning, and new QA Automation opportunities
+
+
 
 🔗 LinkedIn: www.linkedin.com/in/marco-lo-bianco-869311b1
