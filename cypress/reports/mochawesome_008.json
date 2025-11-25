@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-25T12:12:13.023Z",
+    "end": "2025-11-25T12:12:17.105Z",
+    "duration": 4082,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "79fcb1b0-c9c8-4533-b227-36079b19e298",
+      "title": "",
+      "fullFile": "cypress\\e2e\\real_sites\\02_product.cy.js",
+      "file": "cypress\\e2e\\real_sites\\02_product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c45c970a-74d2-4d85-a374-ec925cbcfcd6",
+          "title": "Product Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display product titles",
+              "fullTitle": "Product Page Tests should display product titles",
+              "timedOut": null,
+              "duration": 1301,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Assert: at least one product is visible\n_productsPage.default.productTitle().should('have.length.greaterThan', 0);",
+              "err": {},
+              "uuid": "92430fa8-497a-44b8-b50b-46bbcdbb833b",
+              "parentUUID": "c45c970a-74d2-4d85-a374-ec925cbcfcd6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should add a product to the cart",
+              "fullTitle": "Product Page Tests should add a product to the cart",
+              "timedOut": null,
+              "duration": 1127,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act: add first product to cart\n_productsPage.default.productTitle().first().then($el => {\n  const productName = $el.text();\n  _productsPage.default.addProductToCart(productName);\n  // Assert: cart badge shows 1\n  _productsPage.default.shoppingCartLink().should('contain.text', '1');\n});",
+              "err": {},
+              "uuid": "694c866d-b561-43cb-85b5-c1ac87eff45c",
+              "parentUUID": "c45c970a-74d2-4d85-a374-ec925cbcfcd6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92430fa8-497a-44b8-b50b-46bbcdbb833b",
+            "694c866d-b561-43cb-85b5-c1ac87eff45c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2428,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
