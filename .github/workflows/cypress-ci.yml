@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 5️⃣ Run Cypress tests (usa reporter da cypress.config.js)
+      # 5️⃣ Run Cypress tests (usa reporter dal config)
       - name: Run Cypress tests
         run: npx cypress run --headless
 
