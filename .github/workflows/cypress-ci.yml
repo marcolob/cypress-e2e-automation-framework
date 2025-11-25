@@ -36,18 +36,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 5️⃣ Run Cypress tests with Mochawesome reporter
+      # 5️⃣ Run Cypress tests (usa reporter da cypress.config.js)
       - name: Run Cypress tests
-        run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,json=true,overwrite=false,html=false
+        run: npx cypress run --headless
 
-      # 6️⃣ Merge and generate HTML report
+      # 6️⃣ Debug: verifica che i JSON siano stati creati
+      - name: List report files
+        run: ls -l cypress/reports
+
+      # 7️⃣ Merge e genera report HTML con Mochawesome
       - name: Generate Mochawesome report
         run: |
           mkdir -p cypress/reports/html
           npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json
           npx marge cypress/reports/report.json -f report -o cypress/reports/html
 
-      # 7️⃣ Upload report artifact
+      # 8️⃣ Upload report come artefatto
       - name: Upload report artifact
         uses: actions/upload-artifact@v4
         with:
