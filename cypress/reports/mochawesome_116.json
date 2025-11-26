@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-26T13:50:49.169Z",
+    "end": "2025-11-26T13:50:51.133Z",
+    "duration": 1964,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d9b38b9a-66bd-45e1-adb8-99d97662ecf4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\real_sites\\03_add_to_cart.cy.js",
+      "file": "cypress\\e2e\\real_sites\\03_add_to_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c9099434-4499-472a-854f-cfacbff39ea7",
+          "title": "Add to Cart Flow - SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add multiple products to the cart",
+              "fullTitle": "Add to Cart Flow - SauceDemo should add multiple products to the cart",
+              "timedOut": null,
+              "duration": 1871,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.inventory_item').each(($el, index) => {\n  if (index < 2) {\n    cy.wrap($el).find('.btn_inventory').click();\n  }\n});\ncy.get('.shopping_cart_badge').should('contain', '2');",
+              "err": {},
+              "uuid": "70a72623-f77d-4e08-900c-ea7e85a38d95",
+              "parentUUID": "c9099434-4499-472a-854f-cfacbff39ea7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "70a72623-f77d-4e08-900c-ea7e85a38d95"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1871,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

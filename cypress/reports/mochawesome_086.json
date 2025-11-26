@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-26T13:36:31.339Z",
+    "end": "2025-11-26T13:36:32.930Z",
+    "duration": 1591,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed2a53a7-33d3-441d-b35b-22de68924198",
+      "title": "",
+      "fullFile": "cypress\\e2e\\basics\\checkbox.cy.js",
+      "file": "cypress\\e2e\\basics\\checkbox.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f1f608c-b6c0-447d-b069-820c98c25d42",
+          "title": "Product Filter Checkbox - SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should select \"Price (low to high)\" filter",
+              "fullTitle": "Product Filter Checkbox - SauceDemo should select \"Price (low to high)\" filter",
+              "timedOut": null,
+              "duration": 1503,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.product_sort_container').select('lohi');\ncy.get('.inventory_item_price').first().should('contain.text', '7.99'); // prezzo più basso",
+              "err": {},
+              "uuid": "d34bd769-326e-4dee-a483-6cff8e02f7a8",
+              "parentUUID": "6f1f608c-b6c0-447d-b069-820c98c25d42",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d34bd769-326e-4dee-a483-6cff8e02f7a8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1503,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

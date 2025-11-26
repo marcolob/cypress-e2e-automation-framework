@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-26T13:01:26.689Z",
+    "end": "2025-11-26T13:01:26.934Z",
+    "duration": 245,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "36bd0b1a-c442-4406-8674-69cd2c0edeae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\real_sites\\01_homepage.cy.js",
+      "file": "cypress\\e2e\\real_sites\\01_homepage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "822f1b5c-29d8-42c2-9bdc-be3f855ea489",
+          "title": "Login Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display login form correctly",
+              "fullTitle": "Login Page Tests should display login form correctly",
+              "timedOut": null,
+              "duration": 175,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Assert: check all elements exist\n_loginPage.default.usernameInput().should('be.visible');\n_loginPage.default.passwordInput().should('be.visible');\n_loginPage.default.loginButton().should('be.visible');",
+              "err": {
+                "message": "TypeError: _loginPage.default.visit is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login Page Tests`",
+                "estack": "TypeError: _loginPage.default.visit is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login Page Tests`\n    at Context.eval (webpack://cypressclean/./cypress/e2e/real_sites/01_homepage.cy.js:7:14)\n    at runnable.fn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:141800:19)\n    at callFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160869:21)\n    at Runnable.run (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160856:7)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:166951:30)\n    at PassThroughHandlerContext.finallyHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "18a3647d-d242-412e-aad4-98931423bd01",
+              "parentUUID": "822f1b5c-29d8-42c2-9bdc-be3f855ea489",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show error message on invalid credentials",
+              "fullTitle": "Login Page Tests should show error message on invalid credentials",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act: enter invalid credentials\n_loginPage.default.enterUsername('invalid_user');\n_loginPage.default.enterPassword('invalid_pass');\n_loginPage.default.clickLogin();\n// Assert: error message is visible\n_loginPage.default.errorMessage().should('be.visible').and('contain.text', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "9b430d4d-ed4f-4965-9acc-a7ff1e5d73ee",
+              "parentUUID": "822f1b5c-29d8-42c2-9bdc-be3f855ea489",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "18a3647d-d242-412e-aad4-98931423bd01"
+          ],
+          "pending": [],
+          "skipped": [
+            "9b430d4d-ed4f-4965-9acc-a7ff1e5d73ee"
+          ],
+          "duration": 175,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

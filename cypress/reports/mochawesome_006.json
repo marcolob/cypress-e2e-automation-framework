@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-25T12:12:04.719Z",
-    "end": "2025-11-25T12:12:04.964Z",
-    "duration": 245,
+    "start": "2025-11-26T12:06:05.827Z",
+    "end": "2025-11-26T12:06:06.307Z",
+    "duration": 480,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "06cc9a15-7641-490a-bf95-2f84127823a2",
+      "uuid": "242d9d9f-1127-468b-8170-3d55abee842a",
       "title": "",
-      "fullFile": "cypress\\e2e\\basics\\radio.cy.js",
-      "file": "cypress\\e2e\\basics\\radio.cy.js",
+      "fullFile": "cypress\\e2e\\basics\\dropdown.cy.js",
+      "file": "cypress\\e2e\\basics\\dropdown.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "b9e44852-f5af-4073-b3a7-d01925f7b422",
-          "title": "Test Radio Buttons",
+          "uuid": "853579ee-7d7e-4868-aafc-e124ab44bccc",
+          "title": "Test Dropdown",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Seleziona una opzione radio",
-              "fullTitle": "Test Radio Buttons Seleziona una opzione radio",
+              "title": "Seleziona un valore dal dropdown",
+              "fullTitle": "Test Dropdown Seleziona un valore dal dropdown",
               "timedOut": null,
-              "duration": 215,
+              "duration": 441,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit('cypress/fixtures/radio.html');\n// Controlla che le opzioni siano visibili\ncy.get('input[name=\"genere\"]').should('have.length', 2);\n// Seleziona \"Maschio\"\ncy.get('input[name=\"genere\"][value=\"maschio\"]').check().should('be.checked');\n// Verifica che \"Femmina\" non sia selezionata\ncy.get('input[name=\"genere\"][value=\"femmina\"]').should('not.be.checked');",
+              "code": "cy.visit('cypress/fixtures/dropdown.html');\n// Controlla che il dropdown sia visibile\ncy.get('select[name=\"frutta\"]').should('be.visible');\n// Seleziona un valore\ncy.get('select[name=\"frutta\"]').select('Banana');\n// Verifica che il valore selezionato sia corretto\ncy.get('select[name=\"frutta\"]').should('have.value', 'banana');",
               "err": {},
-              "uuid": "61579b91-dcdf-4b88-b39a-9ae10c2884d2",
-              "parentUUID": "b9e44852-f5af-4073-b3a7-d01925f7b422",
+              "uuid": "844b2c1c-fc87-4b01-95ac-64ec3442581a",
+              "parentUUID": "853579ee-7d7e-4868-aafc-e124ab44bccc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "61579b91-dcdf-4b88-b39a-9ae10c2884d2"
+            "844b2c1c-fc87-4b01-95ac-64ec3442581a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 215,
+          "duration": 441,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -84,7 +84,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -96,7 +96,7 @@
       "options": {
         "reportDir": "cypress/reports",
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true
       },
       "version": "6.3.2"

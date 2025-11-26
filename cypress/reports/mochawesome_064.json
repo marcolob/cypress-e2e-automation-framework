@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-26T13:16:25.797Z",
+    "end": "2025-11-26T13:16:26.032Z",
+    "duration": 235,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "cbd490ea-a8f1-4c05-b5c2-e31ef4aa5be2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\real_sites\\02_product.cy.js",
+      "file": "cypress\\e2e\\real_sites\\02_product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c96bebc-4458-45cc-93a2-2a2356275876",
+          "title": "Product Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display product titles",
+              "fullTitle": "Product Page Tests should display product titles",
+              "timedOut": null,
+              "duration": 166,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Assert: at least one product is visible\n_productsPage.default.productTitle().should('have.length.greaterThan', 0);",
+              "err": {
+                "message": "TypeError: _loginPage.default.visit is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Product Page Tests`",
+                "estack": "TypeError: _loginPage.default.visit is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Product Page Tests`\n    at Context.eval (webpack://cypressclean/./cypress/e2e/real_sites/02_product.cy.js:8:14)\n    at runnable.fn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:141800:19)\n    at callFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160869:21)\n    at Runnable.run (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160856:7)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:166951:30)\n    at PassThroughHandlerContext.finallyHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "b2b1786a-ed07-44f0-a1e5-5b5f5b945f29",
+              "parentUUID": "3c96bebc-4458-45cc-93a2-2a2356275876",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should add a product to the cart",
+              "fullTitle": "Product Page Tests should add a product to the cart",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act: add first product to cart\n_productsPage.default.productTitle().first().then($el => {\n  const productName = $el.text();\n  _productsPage.default.addProductToCart(productName);\n  // Assert: cart badge shows 1\n  _productsPage.default.shoppingCartLink().should('contain.text', '1');\n});",
+              "err": {},
+              "uuid": "a06cf4bf-cf14-45e2-a5b6-742f3585ab92",
+              "parentUUID": "3c96bebc-4458-45cc-93a2-2a2356275876",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b2b1786a-ed07-44f0-a1e5-5b5f5b945f29"
+          ],
+          "pending": [],
+          "skipped": [
+            "a06cf4bf-cf14-45e2-a5b6-742f3585ab92"
+          ],
+          "duration": 166,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

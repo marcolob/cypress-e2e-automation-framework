@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-26T12:27:51.939Z",
+    "end": "2025-11-26T12:27:55.982Z",
+    "duration": 4043,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6d4354cd-e118-403e-a755-8a9da6a2f783",
+      "title": "",
+      "fullFile": "cypress\\e2e\\dataDriven\\dataDriven.cy.js",
+      "file": "cypress\\e2e\\dataDriven\\dataDriven.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "should login with user: standard_user",
+          "fullTitle": "should login with user: standard_user",
+          "timedOut": null,
+          "duration": 1907,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('/'); // baseUrl già configurato\ncy.get('#user-name').type(user.username);\ncy.get('#password').type(user.password);\ncy.get('#login-button').click();\nif (user.blocked) {\n  cy.get('[data-test=\"error\"]').should('contain.text', 'locked out');\n} else {\n  cy.url().should('include', '/inventory');\n}",
+          "err": {},
+          "uuid": "8cded0d3-a356-4094-ab3f-bf976be94d0c",
+          "parentUUID": "6d4354cd-e118-403e-a755-8a9da6a2f783",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "should login with user: locked_out_user",
+          "fullTitle": "should login with user: locked_out_user",
+          "timedOut": null,
+          "duration": 1182,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('/'); // baseUrl già configurato\ncy.get('#user-name').type(user.username);\ncy.get('#password').type(user.password);\ncy.get('#login-button').click();\nif (user.blocked) {\n  cy.get('[data-test=\"error\"]').should('contain.text', 'locked out');\n} else {\n  cy.url().should('include', '/inventory');\n}",
+          "err": {},
+          "uuid": "53aec107-3081-4493-b687-35b71fa78c13",
+          "parentUUID": "6d4354cd-e118-403e-a755-8a9da6a2f783",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "should login with user: problem_user",
+          "fullTitle": "should login with user: problem_user",
+          "timedOut": null,
+          "duration": 841,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('/'); // baseUrl già configurato\ncy.get('#user-name').type(user.username);\ncy.get('#password').type(user.password);\ncy.get('#login-button').click();\nif (user.blocked) {\n  cy.get('[data-test=\"error\"]').should('contain.text', 'locked out');\n} else {\n  cy.url().should('include', '/inventory');\n}",
+          "err": {},
+          "uuid": "c4ab125e-4a68-4433-a636-2d2b202f36cf",
+          "parentUUID": "6d4354cd-e118-403e-a755-8a9da6a2f783",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "8cded0d3-a356-4094-ab3f-bf976be94d0c",
+        "53aec107-3081-4493-b687-35b71fa78c13",
+        "c4ab125e-4a68-4433-a636-2d2b202f36cf"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3930,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

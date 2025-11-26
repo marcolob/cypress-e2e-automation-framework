@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-26T13:01:18.975Z",
+    "end": "2025-11-26T13:01:25.048Z",
+    "duration": 6073,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "76644d8e-d20d-4646-bb9e-d4367dd48688",
+      "title": "",
+      "fullFile": "cypress\\e2e\\forms\\form.cy.js",
+      "file": "cypress\\e2e\\forms\\form.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9551dc9-e8c1-4945-9041-b98abb7d928c",
+          "title": "Contact Form Test - SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should submit the contact form",
+              "fullTitle": "Contact Form Test - SauceDemo should submit the contact form",
+              "timedOut": null,
+              "duration": 6027,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('[data-test=username]').type('standard_user');\ncy.get('[data-test=password]').type('secret_sauce');\ncy.get('[data-test=login-button]').click();\n// Simuliamo un form: inseriamo un commento prodotto\ncy.get('.inventory_item').first().click();\ncy.get('.inventory_details_desc_container').type('Test commento prodotto', {\n  force: true\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.inventory_details_desc_container`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.inventory_details_desc_container`, but never found it.\n    at Context.eval (webpack://cypressclean/./cypress/e2e/forms/form.cy.js:10:7)",
+                "diff": null
+              },
+              "uuid": "dc39f178-1671-4285-92c9-d708f97b5fc7",
+              "parentUUID": "d9551dc9-e8c1-4945-9041-b98abb7d928c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "dc39f178-1671-4285-92c9-d708f97b5fc7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6027,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

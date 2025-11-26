@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-26T13:01:34.127Z",
+    "end": "2025-11-26T13:01:34.321Z",
+    "duration": 194,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8a731b79-30f1-4d35-88d3-21ead60b7a01",
+      "title": "",
+      "fullFile": "cypress\\e2e\\real_sites\\04_login.cy.js",
+      "file": "cypress\\e2e\\real_sites\\04_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "debfe86d-1944-41c4-b214-9bb8af8b5dfa",
+          "title": "Login Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login successfully with valid credentials",
+              "fullTitle": "Login Flow should login successfully with valid credentials",
+              "timedOut": null,
+              "duration": 137,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Arrange: visit login page\n_loginPage.default.visit();\n// Act: login with valid credentials\n_loginPage.default.enterUsername('standard_user');\n_loginPage.default.enterPassword('secret_sauce');\n_loginPage.default.clickLogin();\n// Assert: URL includes /inventory.html\ncy.url().should('include', '/inventory.html');",
+              "err": {
+                "message": "TypeError: _loginPage.default.visit is not a function",
+                "estack": "TypeError: _loginPage.default.visit is not a function\n    at Context.eval (webpack://cypressclean/./cypress/e2e/real_sites/04_login.cy.js:7:14)\n    at runnable.fn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:141800:19)\n    at callFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160869:21)\n    at Runnable.run (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160856:7)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:166951:30)\n    at PassThroughHandlerContext.finallyHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "eea2378d-c201-4d9c-9f33-3fd715c3d425",
+              "parentUUID": "debfe86d-1944-41c4-b214-9bb8af8b5dfa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "eea2378d-c201-4d9c-9f33-3fd715c3d425"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 137,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

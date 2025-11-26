@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-26T13:32:53.542Z",
+    "end": "2025-11-26T13:32:55.066Z",
+    "duration": 1524,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41aab615-f5bc-439b-9b88-6fe52c9ba4da",
+      "title": "",
+      "fullFile": "cypress\\e2e\\basics\\dropdown.cy.js",
+      "file": "cypress\\e2e\\basics\\dropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4df8757f-b1cb-4883-94ac-aa9d66b6c9bf",
+          "title": "Dropdown Test - SauceDemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should select an option from product sort dropdown",
+              "fullTitle": "Dropdown Test - SauceDemo should select an option from product sort dropdown",
+              "timedOut": null,
+              "duration": 1463,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.product_sort_container').select('Price (low to high)');\ncy.get('.inventory_item').first().should('contain.text', 'Sauce Labs Onesie');",
+              "err": {},
+              "uuid": "9c300ad9-bf1d-4225-932d-53b6921b8893",
+              "parentUUID": "4df8757f-b1cb-4883-94ac-aa9d66b6c9bf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9c300ad9-bf1d-4225-932d-53b6921b8893"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1463,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

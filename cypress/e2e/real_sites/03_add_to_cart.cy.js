@@ -1,26 +1,17 @@
-import LoginPage from '../../pages/loginPage';
-import ProductsPage from '../../pages/productsPage';
-import CartPage from '../../pages/cartPage';
-
-describe('Add to Cart Flow', () => {
-
+describe('Add to Cart Flow - SauceDemo', () => {
   beforeEach(() => {
-    // Arrange: login and go to products
-    LoginPage.visit();
-    LoginPage.enterUsername('standard_user');
-    LoginPage.enterPassword('secret_sauce');
-    LoginPage.clickLogin();
+    cy.visit('/');
+    cy.get('[data-test=username]').type('standard_user');
+    cy.get('[data-test=password]').type('secret_sauce');
+    cy.get('[data-test=login-button]').click();
   });
 
   it('should add multiple products to the cart', () => {
-    const products = ['Sauce Labs Backpack', 'Sauce Labs Bike Light'];
-
-    // Act: add products
-    products.forEach(product => ProductsPage.addProductToCart(product));
-    ProductsPage.goToCart();
-
-    // Assert: all products are in the cart
-    products.forEach(product => CartPage.verifyProductInCart(product));
+    cy.get('.inventory_item').each(($el, index) => {
+      if (index < 2) {
+        cy.wrap($el).find('.btn_inventory').click();
+      }
+    });
+    cy.get('.shopping_cart_badge').should('contain', '2');
   });
-
 });

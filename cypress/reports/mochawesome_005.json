@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-25T12:12:01.823Z",
-    "end": "2025-11-25T12:12:03.197Z",
-    "duration": 1374,
-    "testsRegistered": 2,
+    "start": "2025-11-26T12:06:01.617Z",
+    "end": "2025-11-26T12:06:02.350Z",
+    "duration": 733,
+    "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,68 +18,49 @@
   },
   "results": [
     {
-      "uuid": "c6c87132-06f8-4c25-8c34-f44efb81f469",
+      "uuid": "0bdda8a1-5e19-4ead-9c59-149d520977e9",
       "title": "",
-      "fullFile": "cypress\\e2e\\basics\\login.cy.js",
-      "file": "cypress\\e2e\\basics\\login.cy.js",
+      "fullFile": "cypress\\e2e\\basics\\checkbox.cy.js",
+      "file": "cypress\\e2e\\basics\\checkbox.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "f54a098d-0221-4777-b8bf-26ecaf060f62",
-          "title": "Login Form Test",
+          "uuid": "d2dfc73f-700b-48bc-a4c0-26eabc3b2324",
+          "title": "Test Checkbox",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Should login with correct credentials",
-              "fullTitle": "Login Form Test Should login with correct credentials",
+              "title": "Seleziona e deseleziona una checkbox",
+              "fullTitle": "Test Checkbox Seleziona e deseleziona una checkbox",
               "timedOut": null,
-              "duration": 697,
+              "duration": 616,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit('cypress/fixtures/login.html');\ncy.get('input[name=\"username\"]').type('admin');\ncy.get('input[name=\"password\"]').type('1234');\ncy.get('button[type=\"submit\"]').click();\ncy.get('.message').should('contain', 'Login successful');",
+              "code": "cy.visit('cypress/fixtures/checkbox.html');\n// Controlla che la checkbox sia visibile\ncy.get('input[name=\"newsletter\"]').should('be.visible');\n// Seleziona la checkbox\ncy.get('input[name=\"newsletter\"]').check().should('be.checked');\n// Deseleziona la checkbox\ncy.get('input[name=\"newsletter\"]').uncheck().should('not.be.checked');",
               "err": {},
-              "uuid": "6c37fa0c-fe69-4a57-aac9-cdcdbec611c7",
-              "parentUUID": "f54a098d-0221-4777-b8bf-26ecaf060f62",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Should show error for wrong credentials",
-              "fullTitle": "Login Form Test Should show error for wrong credentials",
-              "timedOut": null,
-              "duration": 582,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit('cypress/fixtures/login.html');\ncy.get('input[name=\"username\"]').type('user');\ncy.get('input[name=\"password\"]').type('wrong');\ncy.get('button[type=\"submit\"]').click();\ncy.get('.message').should('contain', 'Invalid credentials');",
-              "err": {},
-              "uuid": "2234ff00-9a6c-4de0-b31c-8b3b559a7e7c",
-              "parentUUID": "f54a098d-0221-4777-b8bf-26ecaf060f62",
+              "uuid": "dbf621d9-3db8-43a5-ab30-7b1ce22512d7",
+              "parentUUID": "d2dfc73f-700b-48bc-a4c0-26eabc3b2324",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6c37fa0c-fe69-4a57-aac9-cdcdbec611c7",
-            "2234ff00-9a6c-4de0-b31c-8b3b559a7e7c"
+            "dbf621d9-3db8-43a5-ab30-7b1ce22512d7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1279,
+          "duration": 616,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -103,7 +84,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -115,7 +96,7 @@
       "options": {
         "reportDir": "cypress/reports",
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true
       },
       "version": "6.3.2"

@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 3,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2025-11-25T12:11:44.959Z",
-    "end": "2025-11-25T12:11:45.286Z",
-    "duration": 327,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2025-11-26T12:05:12.840Z",
+    "end": "2025-11-26T12:05:27.735Z",
+    "duration": 14895,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,49 +18,92 @@
   },
   "results": [
     {
-      "uuid": "2668eec0-f8da-4e94-bb2a-b964374db49e",
+      "uuid": "cb0ec437-7c8e-48b9-ae04-0075cb924501",
       "title": "",
-      "fullFile": "cypress\\e2e\\basics\\dropdown.cy.js",
-      "file": "cypress\\e2e\\basics\\dropdown.cy.js",
+      "fullFile": "cypress\\e2e\\dataDriven\\dataDriven.cy.js",
+      "file": "cypress\\e2e\\dataDriven\\dataDriven.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "259d6984-7120-49c8-afe6-9900515cc147",
-          "title": "Test Dropdown",
+          "uuid": "245b65ec-9741-4f6c-af8b-b402cf8717ec",
+          "title": "Data Driven Login Tests",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Seleziona un valore dal dropdown",
-              "fullTitle": "Test Dropdown Seleziona un valore dal dropdown",
+              "title": "should login with user: standard_user",
+              "fullTitle": "Data Driven Login Tests should login with user: standard_user",
               "timedOut": null,
-              "duration": 290,
+              "duration": 3671,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit('cypress/fixtures/dropdown.html');\n// Controlla che il dropdown sia visibile\ncy.get('select[name=\"frutta\"]').should('be.visible');\n// Seleziona un valore\ncy.get('select[name=\"frutta\"]').select('Banana');\n// Verifica che il valore selezionato sia corretto\ncy.get('select[name=\"frutta\"]').should('have.value', 'banana');",
+              "code": "_loginPage.default.visit();\n_loginPage.default.enterUsername(user.username);\n_loginPage.default.enterPassword(user.password);\n_loginPage.default.clickLogin();\ncy.url().should('include', '/inventory');",
               "err": {},
-              "uuid": "69959f41-f3b6-440d-b2ea-8099b8871db4",
-              "parentUUID": "259d6984-7120-49c8-afe6-9900515cc147",
+              "uuid": "ee319843-839d-43b0-b720-1c64603bafd8",
+              "parentUUID": "245b65ec-9741-4f6c-af8b-b402cf8717ec",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should login with user: locked_out_user",
+              "fullTitle": "Data Driven Login Tests should login with user: locked_out_user",
+              "timedOut": null,
+              "duration": 5636,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.visit();\n_loginPage.default.enterUsername(user.username);\n_loginPage.default.enterPassword(user.password);\n_loginPage.default.clickLogin();\ncy.url().should('include', '/inventory');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/' to include '/inventory'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.saucedemo.com/' to include '/inventory'\n    at Context.eval (webpack://cypressclean/./cypress/e2e/dataDriven/dataDriven.cy.js:12:15)",
+                "diff": null
+              },
+              "uuid": "a50391cb-6fb6-489d-a0f9-bf42e2bc9622",
+              "parentUUID": "245b65ec-9741-4f6c-af8b-b402cf8717ec",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should login with user: problem_user",
+              "fullTitle": "Data Driven Login Tests should login with user: problem_user",
+              "timedOut": null,
+              "duration": 1988,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.visit();\n_loginPage.default.enterUsername(user.username);\n_loginPage.default.enterPassword(user.password);\n_loginPage.default.clickLogin();\ncy.url().should('include', '/inventory');",
+              "err": {},
+              "uuid": "69bd3f15-c9a9-42e9-aedf-7c9dd3cb58ed",
+              "parentUUID": "245b65ec-9741-4f6c-af8b-b402cf8717ec",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "69959f41-f3b6-440d-b2ea-8099b8871db4"
+            "ee319843-839d-43b0-b720-1c64603bafd8",
+            "69bd3f15-c9a9-42e9-aedf-7c9dd3cb58ed"
           ],
-          "failures": [],
+          "failures": [
+            "a50391cb-6fb6-489d-a0f9-bf42e2bc9622"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 290,
+          "duration": 11295,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -84,7 +127,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -96,7 +139,7 @@
       "options": {
         "reportDir": "cypress/reports",
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true
       },
       "version": "6.3.2"

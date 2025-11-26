@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-26T12:27:57.858Z",
+    "end": "2025-11-26T12:27:58.117Z",
+    "duration": 259,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "45a40d31-878c-48c5-9643-e85ea1bf4e96",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login\\login.cy.js",
+      "file": "cypress\\e2e\\login\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "79616202-4efb-4363-9e88-dc6060a92ab0",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display login form correctly",
+              "fullTitle": "Login Tests should display login form correctly",
+              "timedOut": null,
+              "duration": 177,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.usernameInput().should('be.visible');\n_loginPage.default.passwordInput().should('be.visible');\n_loginPage.default.loginButton().should('be.visible');",
+              "err": {
+                "message": "TypeError: _loginPage.default.visit is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login Tests`",
+                "estack": "TypeError: _loginPage.default.visit is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login Tests`\n    at Context.eval (webpack://cypressclean/./cypress/e2e/login/login.cy.js:6:14)\n    at runnable.fn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:141800:19)\n    at callFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160869:21)\n    at Runnable.run (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:160856:7)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:166951:30)\n    at PassThroughHandlerContext.finallyHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "45bd0d0c-5364-44b5-a3e4-3d066d238e23",
+              "parentUUID": "79616202-4efb-4363-9e88-dc6060a92ab0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show error on invalid credentials",
+              "fullTitle": "Login Tests should show error on invalid credentials",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.enterUsername('wrongUser');\n_loginPage.default.enterPassword('wrongPass');\n_loginPage.default.clickLogin();\n_loginPage.default.errorMessage().should('be.visible').and('contain.text', 'Epic sadface');",
+              "err": {},
+              "uuid": "a3b086bf-965f-49f3-8337-47187ca26888",
+              "parentUUID": "79616202-4efb-4363-9e88-dc6060a92ab0",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should login successfully with valid credentials",
+              "fullTitle": "Login Tests should login successfully with valid credentials",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.enterUsername('standard_user');\n_loginPage.default.enterPassword('secret_sauce');\n_loginPage.default.clickLogin();\ncy.url().should('include', '/inventory'); // assuming post-login page",
+              "err": {},
+              "uuid": "5ce432ae-cba2-4610-99e6-5e483b6ccd32",
+              "parentUUID": "79616202-4efb-4363-9e88-dc6060a92ab0",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "45bd0d0c-5364-44b5-a3e4-3d066d238e23"
+          ],
+          "pending": [],
+          "skipped": [
+            "a3b086bf-965f-49f3-8337-47187ca26888",
+            "5ce432ae-cba2-4610-99e6-5e483b6ccd32"
+          ],
+          "duration": 177,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

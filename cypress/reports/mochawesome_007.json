@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-25T12:12:07.129Z",
-    "end": "2025-11-25T12:12:11.308Z",
-    "duration": 4179,
-    "testsRegistered": 2,
+    "start": "2025-11-26T12:06:10.272Z",
+    "end": "2025-11-26T12:06:12.911Z",
+    "duration": 2639,
+    "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,68 +18,49 @@
   },
   "results": [
     {
-      "uuid": "705d7836-7d78-408b-8a15-e12f9f040842",
+      "uuid": "238d5797-c502-41e7-a30e-e769f02dbff5",
       "title": "",
-      "fullFile": "cypress\\e2e\\real_sites\\01_homepage.cy.js",
-      "file": "cypress\\e2e\\real_sites\\01_homepage.cy.js",
+      "fullFile": "cypress\\e2e\\basics\\form.cy.js",
+      "file": "cypress\\e2e\\basics\\form.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "750150fa-ac1e-4a28-a038-c776d12561a8",
-          "title": "Login Page Tests",
+          "uuid": "09973ac6-9b20-4df4-ad6d-70de4aa54cfb",
+          "title": "Test Modulo di Contatto Locale",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "should display login form correctly",
-              "fullTitle": "Login Page Tests should display login form correctly",
+              "title": "Compila e invia il modulo di contatto",
+              "fullTitle": "Test Modulo di Contatto Locale Compila e invia il modulo di contatto",
               "timedOut": null,
-              "duration": 1144,
+              "duration": 2494,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Assert: check all elements exist\n_loginPage.default.usernameInput().should('be.visible');\n_loginPage.default.passwordInput().should('be.visible');\n_loginPage.default.loginButton().should('be.visible');",
+              "code": "// Visita il file HTML locale (relativo alla cartella cypress/fixtures)\ncy.visit('cypress/fixtures/index.html');\n// Controlla che il modulo sia visibile\ncy.get('form').should('be.visible');\n// Compila i campi del modulo\ncy.get('input[name=\"nome\"]').type('Mario Rossi');\ncy.get('input[name=\"email\"]').type('mario.rossi@example.com');\ncy.get('textarea[name=\"messaggio\"]').type('Ciao, vorrei maggiori informazioni sui vostri servizi.');\n// Invia il modulo\ncy.get('button[type=\"submit\"]').click();\n// Verifica che il messaggio di conferma sia visibile\ncy.get('.success-message').should('be.visible').and('contain', 'Grazie per averci contattato!');",
               "err": {},
-              "uuid": "f787822c-a85d-4270-94cc-3191a13c7ebf",
-              "parentUUID": "750150fa-ac1e-4a28-a038-c776d12561a8",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should show error message on invalid credentials",
-              "fullTitle": "Login Page Tests should show error message on invalid credentials",
-              "timedOut": null,
-              "duration": 1074,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// Act: enter invalid credentials\n_loginPage.default.enterUsername('invalid_user');\n_loginPage.default.enterPassword('invalid_pass');\n_loginPage.default.clickLogin();\n// Assert: error message is visible\n_loginPage.default.errorMessage().should('be.visible').and('contain.text', 'Epic sadface: Username and password do not match any user in this service');",
-              "err": {},
-              "uuid": "054a0522-0be6-4002-9e34-d52ed6ae1fb4",
-              "parentUUID": "750150fa-ac1e-4a28-a038-c776d12561a8",
+              "uuid": "f1acfebb-8154-4865-8111-1558c16b0591",
+              "parentUUID": "09973ac6-9b20-4df4-ad6d-70de4aa54cfb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f787822c-a85d-4270-94cc-3191a13c7ebf",
-            "054a0522-0be6-4002-9e34-d52ed6ae1fb4"
+            "f1acfebb-8154-4865-8111-1558c16b0591"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2218,
+          "duration": 2494,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -103,7 +84,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -115,7 +96,7 @@
       "options": {
         "reportDir": "cypress/reports",
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true
       },
       "version": "6.3.2"

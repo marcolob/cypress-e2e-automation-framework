@@ -1,14 +1,15 @@
-describe('Test Radio Buttons', () => {
-  it('Seleziona una opzione radio', () => {
-    cy.visit('cypress/fixtures/radio.html');
+// basics/radio.cy.js
+describe('Radio-like Test - SauceDemo', () => {
+  beforeEach(() => {
+    cy.visit('/');
+    cy.get('[data-test=username]').type('standard_user');
+    cy.get('[data-test=password]').type('secret_sauce');
+    cy.get('[data-test=login-button]').click();
+    cy.url().should('include', '/inventory.html');
+  });
 
-    // Controlla che le opzioni siano visibili
-    cy.get('input[name="genere"]').should('have.length', 2);
-
-    // Seleziona "Maschio"
-    cy.get('input[name="genere"][value="maschio"]').check().should('be.checked');
-
-    // Verifica che "Femmina" non sia selezionata
-    cy.get('input[name="genere"][value="femmina"]').should('not.be.checked');
+  it('should filter products using dropdown', () => {
+    cy.get('.product_sort_container').select('Name (Z to A)');
+    cy.get('.inventory_item').first().should('contain.text', 'Test.allTheThings() T-Shirt (Red)');
   });
 });
