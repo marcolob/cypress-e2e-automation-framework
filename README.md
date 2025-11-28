@@ -1,6 +1,10 @@
 Cypress Automation Portfolio
 
+---
+
 E2E Testing • UI Automation • Page Object Model
+
+---
 
 📌 Overview
 
@@ -30,6 +34,8 @@ Mochawesome Reporter (HTML + JSON reports)
 
 GitHub Actions CI/CD (in progress)
 
+---
+
 🟢 Test Status (28 Nov 2025)
 
 Total tests: 19
@@ -43,6 +49,8 @@ New tests added: cart/add_product_cart_multiple.cy.js, cart/remove_multiple_prod
 Reports available in cypress/reports/
 
 All critical flows on SauceDemo and local HTML fixtures are working. Multi-product cart functionality and badge updates are fully tested.
+
+---
 
 📁 Project Structure
 
@@ -59,6 +67,8 @@ cypress/
 ├─ reports/ # Mochawesome HTML + JSON reports
 ├─ cypress.config.js
 └─ package.json
+
+---
 
 📌 Folder Description
 
@@ -78,6 +88,8 @@ fixtures/ – Local HTML files and JSON data for the basics tests.
 
 support/ – Global setup: reusable Cypress commands, before/after hooks, shared utilities for test stability.
 
+---
+
 ⚡ How to Run Tests
 
 Aprire Cypress GUI (modalità interattiva):
@@ -90,6 +102,8 @@ Eseguire uno specifico spec:
 npx cypress run --spec "cypress/e2e/cart/add_product_cart_multiple.cy.js"
 
 I report HTML e JSON vengono generati automaticamente in cypress/reports/ e gli screenshot in cypress/screenshots/**/*.png.
+
+---
 
 📬 Contact
 
