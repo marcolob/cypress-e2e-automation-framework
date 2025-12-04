@@ -1,99 +1,23 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-26T19:43:23.066Z",
-    "end": "2025-11-26T19:43:25.898Z",
-    "duration": 2832,
-    "testsRegistered": 2,
-    "passPercent": 100,
-    "pendingPercent": 0,
+    "start": "2025-12-04T14:51:07.777Z",
+    "end": "2025-12-04T14:51:07.777Z",
+    "duration": 0,
+    "testsRegistered": 0,
+    "passPercent": null,
+    "pendingPercent": null,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "084d8dc2-ed71-4f50-9b8e-9505df6fa122",
-      "title": "",
-      "fullFile": "cypress\\e2e\\regression\\regression.cy.js",
-      "file": "cypress\\e2e\\regression\\regression.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "ce80263b-fd53-469a-b192-32a9ff10a85e",
-          "title": "Regression Login Test - SauceDemo",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "should load login page correctly",
-              "fullTitle": "Regression Login Test - SauceDemo should load login page correctly",
-              "timedOut": null,
-              "duration": 1128,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.get('[data-test=username]').should('be.visible');\ncy.get('[data-test=password]').should('be.visible');",
-              "err": {},
-              "uuid": "69b5ec9c-9052-4d0d-bb64-94256bc47a97",
-              "parentUUID": "ce80263b-fd53-469a-b192-32a9ff10a85e",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should show error for wrong credentials",
-              "fullTitle": "Regression Login Test - SauceDemo should show error for wrong credentials",
-              "timedOut": null,
-              "duration": 1539,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.get('[data-test=username]').type('wrong_user');\ncy.get('[data-test=password]').type('wrong_password');\ncy.get('[data-test=login-button]').click();\ncy.get('[data-test=error]').should('contain', 'Username and password do not match');",
-              "err": {},
-              "uuid": "ef051962-6356-4648-aaad-b5a0112fac29",
-              "parentUUID": "ce80263b-fd53-469a-b192-32a9ff10a85e",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "69b5ec9c-9052-4d0d-bb64-94256bc47a97",
-            "ef051962-6356-4648-aaad-b5a0112fac29"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2667,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    }
+    false
   ],
   "meta": {
     "mocha": {

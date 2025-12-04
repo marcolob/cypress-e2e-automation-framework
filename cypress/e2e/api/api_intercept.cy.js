@@ -1,28 +1,29 @@
-// cypress/e2e/api/api_intercept.cy.js
-
-describe('API Intercept Tests', () => {
-
-  it('Mocka risposta API con cy.intercept()', () => {
-    
-    // Intercetta la chiamata e risponde con un mock
-    cy.intercept('GET', 'https://jsonplaceholder.typicode.com/posts/1', {
+describe('API Intercept - Demo Users', () => {
+  it('Intercept GET users and mock response', () => {
+    // Mock dell'API
+    cy.intercept('GET', '**/users', {
       statusCode: 200,
-      body: {
-        id: 1,
-        title: 'Mocked Title',
-        userId: 999
-      }
-    }).as('mockPost');
+      body: [
+        { id: 999, name: 'Mocked User', email: 'mocked@user.com' },
+        { id: 1000, name: 'Another Mock', email: 'another@mock.com' }
+      ]
+    }).as('mockUsers');
 
-    // Trigger della request (puoi usare cy.request oppure visitare una pagina)
-    cy.request('https://jsonplaceholder.typicode.com/posts/1');
-    
-    cy.wait('@mockPost').then((interception) => {
-      expect(interception.response.statusCode).to.eq(200);
-      expect(interception.response.body.title).to.eq('Mocked Title');
-      expect(interception.response.body.userId).to.eq(999);
+    // Legge l'HTML dal fixture e lo mette nel DOM
+    cy.fixture('demo_users.html').then((html) => {
+      document.open();
+      document.write(html);
+      document.close();
     });
 
-  });
+    // Simula il click sul bottone che fa fetch
+    cy.get('#load-users').click();
 
+    // Aspetta che il mock sia intercettato
+    cy.wait('@mockUsers').its('response.statusCode').should('eq', 200);
+
+    // Controlla che il mock sia nel DOM
+    cy.get('#users-list').should('contain.text', 'Mocked User');
+    cy.get('#users-list').should('contain.text', 'Another Mock');
+  });
 });

@@ -2,65 +2,89 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2025-11-26T16:43:52.999Z",
-    "end": "2025-11-26T16:43:56.749Z",
-    "duration": 3750,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2025-12-02T15:13:13.750Z",
+    "end": "2025-12-02T15:13:14.202Z",
+    "duration": 452,
+    "testsRegistered": 2,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "6eaa467b-63f4-44bd-aebf-73293b3bda63",
+      "uuid": "83b65b5d-7893-4de5-8ff0-0dd16332b916",
       "title": "",
-      "fullFile": "cypress\\e2e\\basics\\hello.cy.js",
-      "file": "cypress\\e2e\\basics\\hello.cy.js",
+      "fullFile": "cypress\\e2e\\forms\\form_edge.cy.js",
+      "file": "cypress\\e2e\\forms\\form_edge.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "12828162-7a41-41ff-b123-117a00897be2",
-          "title": "Hello World Test",
+          "uuid": "294bfa2f-df53-4169-ac82-f6f0c0cde619",
+          "title": "Form Edge Cases - SauceDemo",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Visita Google e controlla il titolo",
-              "fullTitle": "Hello World Test Visita Google e controlla il titolo",
+              "title": "should show errors for empty required fields",
+              "fullTitle": "Form Edge Cases - SauceDemo should show errors for empty required fields",
               "timedOut": null,
-              "duration": 1396,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
+              "duration": 364,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// 🔹 Invio del form senza compilare i campi\n_FormPage.default.submitButton.click();\n// 🔹 Verifica che appaiano i messaggi di errore per campi obbligatori\ncy.get('#name-error').should('be.visible').and('contain.text', 'Name is required');\ncy.get('#email-error').should('be.visible').and('contain.text', 'Email is required');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.saucedemo.com/form\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Form Edge Cases - SauceDemo`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.saucedemo.com/form\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Form Edge Cases - SauceDemo`\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:134982:76)\n    at visitFailedByErr (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:134552:12)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:134965:13)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypressclean/./cypress/e2e/forms/form_edge.cy.js:7:7)",
+                "diff": null
+              },
+              "uuid": "f10157ae-0e06-4203-9486-34df5872515d",
+              "parentUUID": "294bfa2f-df53-4169-ac82-f6f0c0cde619",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show error for invalid email format",
+              "fullTitle": "Form Edge Cases - SauceDemo should show error for invalid email format",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit('https://www.google.com');\ncy.title().should('include', 'Google');",
+              "code": "// 🔹 Inserimento dati parziali/errati\n_FormPage.default.nameInput.type('Marco');\n_FormPage.default.emailInput.type('email-non-valida');\n// 🔹 Invio form\n_FormPage.default.submitButton.click();\n// 🔹 Verifica messaggio di errore per email non valida\ncy.get('#email-error').should('be.visible').and('contain.text', 'Invalid email format');",
               "err": {},
-              "uuid": "5802f502-8e79-419b-ae38-01e551da24b8",
-              "parentUUID": "12828162-7a41-41ff-b123-117a00897be2",
+              "uuid": "2e1702e6-13e0-4d7b-9f17-2bc8d48bd9b8",
+              "parentUUID": "294bfa2f-df53-4169-ac82-f6f0c0cde619",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
-          "passes": [
-            "5802f502-8e79-419b-ae38-01e551da24b8"
+          "passes": [],
+          "failures": [
+            "f10157ae-0e06-4203-9486-34df5872515d"
           ],
-          "failures": [],
           "pending": [],
-          "skipped": [],
-          "duration": 1396,
+          "skipped": [
+            "2e1702e6-13e0-4d7b-9f17-2bc8d48bd9b8"
+          ],
+          "duration": 364,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

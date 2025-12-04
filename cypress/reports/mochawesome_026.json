@@ -1,99 +1,23 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-26T16:44:27.844Z",
-    "end": "2025-11-26T16:44:30.497Z",
-    "duration": 2653,
-    "testsRegistered": 2,
-    "passPercent": 100,
-    "pendingPercent": 0,
+    "start": "2025-12-02T15:13:39.233Z",
+    "end": "2025-12-02T15:13:39.233Z",
+    "duration": 0,
+    "testsRegistered": 0,
+    "passPercent": null,
+    "pendingPercent": null,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "d32363a4-d78c-4ca7-824d-5814e60b2f96",
-      "title": "",
-      "fullFile": "cypress\\e2e\\dataDriven\\dataDriven.cy.js",
-      "file": "cypress\\e2e\\dataDriven\\dataDriven.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "b4f2a4a9-c43d-4628-8d7b-e1f5f90f1ac0",
-          "title": "Data Driven Login - SauceDemo",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "should login for standard_user",
-              "fullTitle": "Data Driven Login - SauceDemo should login for standard_user",
-              "timedOut": null,
-              "duration": 1337,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit('/');\ncy.get('[data-test=username]').type(user.username);\ncy.get('[data-test=password]').type(user.password);\ncy.get('[data-test=login-button]').click();\nif (user.valid) {\n  cy.url().should('include', '/inventory.html');\n} else {\n  cy.get('[data-test=error]').should('contain', 'locked out');\n}",
-              "err": {},
-              "uuid": "218d92dd-cab7-4edb-af1a-8c73f1b385ab",
-              "parentUUID": "b4f2a4a9-c43d-4628-8d7b-e1f5f90f1ac0",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should fail for locked_out_user",
-              "fullTitle": "Data Driven Login - SauceDemo should fail for locked_out_user",
-              "timedOut": null,
-              "duration": 1220,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit('/');\ncy.get('[data-test=username]').type(user.username);\ncy.get('[data-test=password]').type(user.password);\ncy.get('[data-test=login-button]').click();\nif (user.valid) {\n  cy.url().should('include', '/inventory.html');\n} else {\n  cy.get('[data-test=error]').should('contain', 'locked out');\n}",
-              "err": {},
-              "uuid": "c9ac36dc-5fe2-4aba-88b6-0c07485bc82a",
-              "parentUUID": "b4f2a4a9-c43d-4628-8d7b-e1f5f90f1ac0",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "218d92dd-cab7-4edb-af1a-8c73f1b385ab",
-            "c9ac36dc-5fe2-4aba-88b6-0c07485bc82a"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2557,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    }
+    false
   ],
   "meta": {
     "mocha": {

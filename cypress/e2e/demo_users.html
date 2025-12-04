@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Users</title>
+</head>
+<body>
+  <h1>Users List</h1>
+  <button id="load-users">Load Users</button>
+  <ul id="users-list"></ul>
+
+  <script>
+    document.getElementById('load-users').addEventListener('click', () => {
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById('users-list');
+          list.innerHTML = '';
+          data.forEach(user => {
+            const li = document.createElement('li');
+            li.textContent = `${user.id} - ${user.name} (${user.email})`;
+            list.appendChild(li);
+          });
+        });
+    });
+  </script>
+</body>
+</html>

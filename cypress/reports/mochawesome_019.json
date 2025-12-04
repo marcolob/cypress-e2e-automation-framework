@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
+    "suites": 0,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2025-11-26T16:43:46.041Z",
-    "end": "2025-11-26T16:43:47.701Z",
-    "duration": 1660,
+    "failures": 1,
+    "start": "2025-12-02T15:13:08.736Z",
+    "end": "2025-12-02T15:13:08.897Z",
+    "duration": 161,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,61 +18,46 @@
   },
   "results": [
     {
-      "uuid": "2bb66fee-5f0c-40b3-97d9-cbfa9e5731e0",
+      "uuid": "ce56deb0-cf34-4ea3-9fed-1bfa35bcb77e",
       "title": "",
-      "fullFile": "cypress\\e2e\\basics\\dropdown.cy.js",
-      "file": "cypress\\e2e\\basics\\dropdown.cy.js",
+      "fullFile": "cypress\\e2e\\dataDriven\\login_negative_dd.cy.js",
+      "file": "cypress\\e2e\\dataDriven\\login_negative_dd.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [],
-      "suites": [
+      "tests": [
         {
-          "uuid": "464c568f-c3a8-44c5-b782-953931bd8021",
-          "title": "Dropdown Test - SauceDemo",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "should select an option from product sort dropdown",
-              "fullTitle": "Dropdown Test - SauceDemo should select an option from product sort dropdown",
-              "timedOut": null,
-              "duration": 1573,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.get('.product_sort_container').select('Price (low to high)');\ncy.get('.inventory_item').first().should('contain.text', 'Sauce Labs Onesie');",
-              "err": {},
-              "uuid": "cd598286-4090-49ba-8910-c6c7944007ef",
-              "parentUUID": "464c568f-c3a8-44c5-b782-953931bd8021",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "cd598286-4090-49ba-8910-c6c7944007ef"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1573,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 132,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "CypressError: The following error originated from your test code, not from Cypress.\n\n  > Cannot call `cy.fixture()` outside a running test.\n\nThis usually happens when you accidentally write commands outside an `it(...)` test.\n\nIf that is the case, just move these commands inside an `it(...)` test.\n\nCheck your test file for errors.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n\nhttps://on.cypress.io/cannot-execute-commands-outside-test",
+            "estack": "CypressError: The following error originated from your test code, not from Cypress.\n\n  > Cannot call `cy.fixture()` outside a running test.\n\nThis usually happens when you accidentally write commands outside an `it(...)` test.\n\nIf that is the case, just move these commands inside an `it(...)` test.\n\nCheck your test file for errors.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n\nhttps://on.cypress.io/cannot-execute-commands-outside-test\n    at ensureRunnable (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:141070:58)\n    at cy.<computed> [as fixture] (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:141559:7)\n    at Suite.eval (webpack://cypressclean/./cypress/e2e/dataDriven/login_negative_dd.cy.js:11:5)\n    at Object.create (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:164936:19)\n    at context.describe.context.context (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:164623:27)\n    at createRunnable (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:148638:31)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:148699:14)\n    at eval (webpack://cypressclean/./cypress/e2e/dataDriven/login_negative_dd.cy.js:4:0)\n    at eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\e2e\\dataDriven\\login_negative_dd.cy.js:130:3)\n    at eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\e2e\\dataDriven\\login_negative_dd.cy.js:132:12)\n    at eval (<anonymous>)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:113097:23)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Object.gotValue (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:6446:18)\n    at Object.gotAccum (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:6435:25)\n    at Object.tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1671:18)\n    at _drainQueueStep (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2370:9)",
+            "diff": null
+          },
+          "uuid": "1dbf6d89-e88e-4f2e-9bab-c4eb4c1b6698",
+          "parentUUID": "ce56deb0-cf34-4ea3-9fed-1bfa35bcb77e",
+          "isHook": false,
+          "skipped": false
         }
       ],
+      "suites": [],
       "passes": [],
-      "failures": [],
+      "failures": [
+        "1dbf6d89-e88e-4f2e-9bab-c4eb4c1b6698"
+      ],
       "pending": [],
       "skipped": [],
-      "duration": 0,
+      "duration": 132,
       "root": true,
-      "rootEmpty": true,
+      "rootEmpty": false,
       "_timeout": 2000
     }
   ],

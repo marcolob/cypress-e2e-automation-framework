@@ -1,80 +1,23 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-26T16:44:32.160Z",
-    "end": "2025-11-26T16:44:33.695Z",
-    "duration": 1535,
-    "testsRegistered": 1,
-    "passPercent": 100,
-    "pendingPercent": 0,
+    "start": "2025-12-02T15:13:41.813Z",
+    "end": "2025-12-02T15:13:41.814Z",
+    "duration": 1,
+    "testsRegistered": 0,
+    "passPercent": null,
+    "pendingPercent": null,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "8e55fe00-a4d5-4632-93e4-5bbe37fee26f",
-      "title": "",
-      "fullFile": "cypress\\e2e\\forms\\form.cy.js",
-      "file": "cypress\\e2e\\forms\\form.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "5ac08698-7f79-479c-8b3b-0e6cd78e2e29",
-          "title": "Contact Form Test - SauceDemo",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "should submit the form",
-              "fullTitle": "Contact Form Test - SauceDemo should submit the form",
-              "timedOut": null,
-              "duration": 1473,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit('/');\ncy.get('[data-test=username]').type('standard_user');\ncy.get('[data-test=password]').type('secret_sauce');\ncy.get('[data-test=login-button]').click();\n// aggiunge i primi 2 prodotti al carrello\ncy.get('.inventory_item').each(($el, index) => {\n  if (index < 2) {\n    cy.wrap($el).find('.btn_inventory').click();\n  }\n});\n// verifica badge carrello\ncy.get('.shopping_cart_badge').should('contain', '2');",
-              "err": {},
-              "uuid": "a28fad8f-9d5d-4e89-8993-a8a4c9d7ea9a",
-              "parentUUID": "5ac08698-7f79-479c-8b3b-0e6cd78e2e29",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "a28fad8f-9d5d-4e89-8993-a8a4c9d7ea9a"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1473,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    }
+    false
   ],
   "meta": {
     "mocha": {
