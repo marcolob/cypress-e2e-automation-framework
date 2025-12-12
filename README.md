@@ -20,7 +20,7 @@ Clean test organization for scalability
 
 CI-ready structure (GitHub Actions integration)
 
-The project is designed to represent the skillset expected from a Junior / Junior-Mid QA Automation Engineer.
+The project is designed to represent the skillset expected from a Junior-Mid QA Automation Engineer.
 
 🛠️ Tech Stack
 
